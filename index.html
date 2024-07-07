@@ -5,6 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <audio id="myAudio" autoplay>
+      <source src="Pufino - Thoughtful (freetouse.com).mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button onclick="togglePlay()">Pause/Resume</button>
+    <script>
+      var myAudio = document.getElementById("myAudio");
+    
+      // Pause/Resume functionality
+      function togglePlay() {
+        if (myAudio.paused) {
+          myAudio.play();
+        } else {
+          myAudio.pause();
+        }
+      }
+    
+      // Auto play on page load
+      window.onload = function() {
+        myAudio.play();
+      };
+    </script>
+
     <!--CSS Styles -->
     <link rel="stylesheet" href="styles.css" />
 
